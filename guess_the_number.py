@@ -17,7 +17,12 @@ def generate_secret(low, high):
 
 def get_guess():
     '''get user's guess'''
-    return int(input('Guess the secret number? '))
+    guess = str(input('Guess the secret number? '))
+    if not guess.isdigit():
+        print("Please enter only a number, and ensure it does not have a decimal point.")
+        return get_guess()
+    else:
+        return int(guess)
 
 
 def check_guess(guess, secret):
