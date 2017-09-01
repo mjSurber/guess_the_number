@@ -6,8 +6,13 @@ too_high = 'too high'
 
 
 def configure_range():
+    min_number = int(input("What would you like the minimum number to be?"))
+    print (str(min_number))
+    max_number = int(input("What would you like the maximum number to be?"))
+    print(str(max_number))
+
     '''Set the high and low values for the random number'''
-    return 1, 10
+    return min_number,max_number
 
 
 def generate_secret(low, high):
@@ -37,8 +42,8 @@ def check_guess(guess, secret):
 
 def main():
     tries =0
-    (low, high) = configure_range()
-    secret = generate_secret(low, high)
+    (min_num, max_num) = configure_range()
+    secret = generate_secret(min_num,max_num)
 
     while True:
         guess = get_guess()
