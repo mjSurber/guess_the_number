@@ -51,6 +51,8 @@ def main():
         else:
             tries +=1
             print("tries: "+ str(tries))
+    input("Press [ENTER] to play again!")
+    main()
 
 if __name__ == '__main__':
     main()
